@@ -5,5 +5,10 @@ video {
 }
 body {
   margin: 0;
-  background-color: var(--noir);
+  background-color: brown;
+  
+}
+.noscroll,
+.noscroll body {
+  overflow: hidden;
 }

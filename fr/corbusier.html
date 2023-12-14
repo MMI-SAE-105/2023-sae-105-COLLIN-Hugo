@@ -1,72 +1,72 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="/public/icones/logo.svg">
     <link rel="stylesheet" href="/src/css/style.css">
+    <script src="/src/script.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+    <body x-data="{ atTop: true }">
 
-<body>
-    <header>
-<div>
-    <a href="/">
-        <img src="/public/icones/logo.svg" alt="logo du site">
-    </a>
-</div>
-<div>
-    <button class="header__menu-btn menu-btn">
-        <span class="menu-btn__hamburger"></span>
-    </button>
-
-    <nav>
-        <ul>
-        <li>
-            <a href="/fr/corbusier.html">Le Corbusier</a>
-        </li>
-        <li>
-            <a href="/fr/unite.html">L’unité d’Habitation</a>
-        </li>
-        <li>
-            <a href="/fr/villa-savoye.html">La villa Savoye</a>
-        </li>
-        <li>
-            <a href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
-        </li>
-        <li>
-            <a href="/fr/tourette.html">La tourette</a>
-        </li>
-        <li>
-            <a href="/fr/centre.html">Le centre Le Corbusier</a>
-        </li>
-        <li>
-            <a href="/fr/cabanon.html">Le cabanon de vacances</a>
-        </li>
-        <li>
-            <a href="/fr/planeix.html">Maison Planeix</a>
-        </li>
-        <li>
-            <a href="/fr/clarte.html">L’immeuble Clarté</a>
-        </li>
-        <li>
-            <a href="/fr/contact.html">Contactez-nous</a>
-        </li>
-    </ul>
-</nav>
-</div>
+        <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+          :class="{ 'header--atTop' : }">
+          <div class="header__start">
+            <a href="/fr/index.html">
+              <img class="header__logo" src="/public/icones/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-controls="mainNav"
+              @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+              <span class="menu-btn__bar"></span>
+            </button>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+              <ul class="menu__list list-unstyled">
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/corbusier.html">Le corbusier</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/unite.html">L'unité d'habitation</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/villa-savoye.html">La villa savoye</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/centre.html">Le centre Le Corbusier</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/cabanon.html">Le cabanon de vacances</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/planeix.html">La maison Planeix</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/clarte.html">L'immeuble Clarté</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 </header>
 <main>
-    <h4>Le corbusier</h4>
-    <p>
+    <h4 class="titre__h4">Le corbusier</h4>
+    <p class="chapo__article">
     Explorez l'héritage visionnaire de Le Corbusier, pionnier de l'architecture moderne, dont les idées révolutionnaires ont 
     redéfini l'espace urbain. Plongez dans son patrimoine classé par l'UNESCO et suivez un itinéraire culturel européen dédié 
     à son impact durable.
     </p>
-    <div>
-        <figure>
+    <div class="image__article">
+        <figure class="image__article-corbusier">
             <img src="/public/image/corbusier-normal.webp" alt="Le corbusier">
-            <figcaption>Par France bleu, le 28 mai 2018</figcaption>
+            <figcaption class="image__legende">Par France bleu, le 28 mai 2018</figcaption>
         </figure>
     </div>
 
@@ -76,17 +76,17 @@
         <p class="citation__nom">Le Corbusier</p>
         </blockquote>
     </div> class="citation__"
-    <div>
-        <h5>Introduction</h5>
-        <p>Charles-Édouard Jeanneret-Gris, dit Le Corbusier, est un architecte, urbaniste, décorateur, peintre, sculpteur, 
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">Introduction</h5>
+        <p class="paragraphe__texte">Charles-Édouard Jeanneret-Gris, dit Le Corbusier, est un architecte, urbaniste, décorateur, peintre, sculpteur, 
              auteur suisse naturalisé française, né le 6 octobre 1887 à La Chaux-de-Fonds en Suisse et mort le 27 août 1965 à 
             Roquebrune-Cap-Martin en France. Il est l'un des principaux représentants du mouvement moderne avec, entre autres, 
             Ludwig Mies van der Rohe, Walter Gropius, Alvar Aalto et Theo van Doesburg. Il a de même côtoyé Robert Mallet-Stevens.
          </p>
     </div>
-    <div>   
-        <h5>Polyvalence artistique</h5>
-        <p>Le Corbusier a également œuvré dans l'urbanisme et le design. Il est connu pour être l'inventeur de « l'unité 
+    <div class="paragraphe">   
+        <h5 class="paragraphe__titre">Polyvalence artistique</h5>
+        <p class="paragraphe__texte">Le Corbusier a également œuvré dans l'urbanisme et le design. Il est connu pour être l'inventeur de « l'unité 
             d'habitation », concept sur lequel il a commencé à travailler dans les années 1920, expression d'une réflexion théorique 
             sur le logement collectif. « L’unité d’habitation de grandeur conforme » (nom donné par Le Corbusier) ne sera construite 
             qu'au moment de la reconstruction après la Seconde Guerre mondiale, en cinq exemplaires tous différents, à Marseille, 
@@ -95,23 +95,23 @@
             piscine, école, commerces, bibliothèque, lieux de rencontre.
         </p>
     </div>
-    <div>
-        <h5>UNESCO</h5>
-        <p>L'œuvre architecturale de Le Corbusier regroupant dix-sept sites (dont dix en France, les autres étant répartis sur trois continents) 
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">UNESCO</h5>
+        <p class="paragraphe__texte">L'œuvre architecturale de Le Corbusier regroupant dix-sept sites (dont dix en France, les autres étant répartis sur trois continents) 
             est classée au patrimoine mondial de l'UNESCO le 17 juillet 2016. Un itinéraire culturel européen intitulé « Destinations 
             Le Corbusier : promenades architecturales » est créé début mai 2019.
         </p>
     </div>
-    <div>    
-        <h5>Influence et Contestation</h5>
-        <p>L'œuvre et la pensée de Le Corbusier ont été particulièrement influentes sur les générations d'architectes 
+    <div class="paragraphe">    
+        <h5 class="paragraphe__titre">Influence et Contestation</h5>
+        <p class="paragraphe__texte">L'œuvre et la pensée de Le Corbusier ont été particulièrement influentes sur les générations d'architectes 
             de l'après-guerre et largement diffusées, avant d'entrer, avec la période du postmodernisme, dans une phase de 
             contestation importante et régulière.
         </p>
     </div>
-    <div>
-        <h5>Architecture Moderne</h5>
-        <p>Il est le père de l'architecture moderne, étant le premier à remplacer les murs porteurs extérieurs par 
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">Architecture Moderne</h5>
+        <p class="paragraphe__texte">Il est le père de l'architecture moderne, étant le premier à remplacer les murs porteurs extérieurs par 
             des piliers de béton armé placés à l'intérieur des constructions.
     
             Dès lors, les façades ne portant plus les étages supérieurs, il est possible de les habiller avec des 
@@ -119,105 +119,176 @@
             sans devoir tenir compte d'un quelconque alignement lié aux poids des étages supérieurs, cette contrainte ayant disparu.
         </p>
     </div>
-    <div>
-        <h5>Liberté Architecturale</h5>
-        <p>Sa principale force a été de réduire considérablement les temps de construction. Il a été le premier à utiliser 
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">Liberté Architecturale</h5>
+        <p class="paragraphe__texte">Sa principale force a été de réduire considérablement les temps de construction. Il a été le premier à utiliser 
             des techniques et des matériaux de base, permettant de construire une maison entière, sur plusieurs étages, 
             en quelques jours, comme son premier complexe, la cité Frugès de Pessac, dans la proche banlieue de Bordeaux, 
             cité composée de cinquante petits immeubles et construite à raison d'environ un nouvel immeuble chaque semaine.
         </p>
     </div>
-    <h4>Réalisation</h4>
-    <div>
-        <div>
-            <a href="/fr/planeix.html">
-            <img src="/public/image/planeix.webp" alt="maison planeix">
-            <p>Maison Planeix (1924)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-        </a>
-        </div>
-        <div>
-            <a href="/fr/villa-savoye.html">
-            <img src="/public/image/villa_savoye.webp" alt="villa savoye">
-            <p>Villa Savoye (1928-1931)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt"> 
-        </a>
-        </div>
-        <div>
-            <a href="/fr/clarte.html">
-            <img src="/public/image/immeuble-clarte.webp" alt="immeuble clarté">
-            <p>Immeuble Clarté (1930)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-        </a>
-        </div>
-        <div>
-            <a href="/fr/unité.html">
-            <img src="/public/image/unite_habitation.jpg" alt="unité d'habitation">
-            <p>Unité d'Habitation (1947-1952)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-        </a>
-        </div>
-        <div>
-            <a href="/fr/cabanon.html">
-            <img src="/public/image/cabanon_le_corbusier.webp" alt="cabanon">
-            <p>Cabanon de Le Corbusier (1952)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-         </a>
-        </div>
-        <div>
-            <a href="/fr/chapelle.html">
-            <img src="/public/image/chapelle.webp" alt="Chapelle Notre dame du haut">
-            <p>Chapelle Notre-Dame-du-Haut (1950-1955)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-        </a>
-        </div>
-        <div>
-            <a href="/fr/tourette.html">
-            <img src="/public/image/tourette.webp" alt="La tourette">
-            <p>La Tourette (1956-1960)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-        </a>
-        </div>
-        <div>
-            <a href="/fr/centre.html">
-            <img src="/public/image/centre_le_corbusier.webp" alt="Centre Le Corbusier">
-            <p>Centre Le Corbusier (1962)</p>
-            <img src="/public/icones/touch-app.svg" alt="doigt">
-        </a>
-        </div>
+    <h4 class="titre__h5">Réalisation</h4>
+    <section class="carroussel container">
+        <div x-data="{
+                hrefCourant: '#ecran-1',
+                hrefCourant: '#ecran-2',
+                hrefCourant: '#ecran-3',
+                hrefCourant: '#ecran-4',
+                hrefCourant: '#ecran-5',
+        }">
+        <button class="carroussel__btn carroussel__btn-avant" aria-label="slide precedant" @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth">
+                    &lt;
+        </button>
+        <button class="carroussel__btn carroussel__btn-apres" aria-label="slide suivant" @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth">
+                    &gt;
+                </button>
+                <div class="carroussel__parent-ecrans" x-ref="parent"
+                @scroll.debounce.250ms.passive="
+                hrefCourant = '#'+
+                                  [...$refs.parent.children]
+                                   .find(e=>e.getBoundingClientRect( ).x>=0)
+                                   .id
+                                                     ">
+                    <div id="ecran-1" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/planeix.webp" alt="image ecran 1">
+                        </figure>
+                            <div class="text">
+                            <a href="/fr/planeix.html">
+                            <p class="carroussel__texte">Maison Planeix (1924)</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                            </div>
+                            </a>
+                    </div>
+                    <div id="ecran-2" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/villa_savoye.webp" alt="image ecran 2">
+                        </figure>
+                            <div>
+                            <a href="/fr/villa-savoye.html">
+                            <p class="carroussel__texte">Villa Savoye (1928-1931)</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                            </div>
+                            </a>
+                    </div>
+                    <div id="ecran-3" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/immeuble-clarte.webp" alt="image ecran 3">
+                        </figure>
+                            <div>
+                            <a href="/fr/clarte.html">
+                            <p class="carroussel__texte">Immeuble Clarté (1930)</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                    </div>
+                            </a>
+                    </div>
+                    <div id="ecran-4" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/unite-habitation.webp" alt="image ecran 4">
+                        </figure>
+                            <div>
+                            <a href="/fr/unite.html">
+                            <p class="carroussel__texte">Unité d'Habitation (1947-1952)</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                    </div>
+                            </a>
+                    </div>
+                    <div id="ecran-5" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/cabanon_le_corbusier.webp" alt="image ecran 5">
+                        </figure>
+                            <a href="/fr/cabanon.html">
+                            <p class="carroussel__texte">Cabanon de vacances (1952)</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                    </div>
+                            </a>
+                    <div id="ecran-6" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/chapelle.webp" alt="image ecran 6">
+                        </figure>
+                            <a href="/fr/chapelle.html">
+                            <p class="carroussel__texte">Chapelle Notre-Dame-du-Haut</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                    </div>
+                            </a>
+                    <div id="ecran-7" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/tourette.webp" alt="image ecran 7">
+                        </figure>
+                            <a href="/fr/tourette.html">
+                            <p class="carroussel__texte">La tourette (1956-1960)</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                    </div>
+                            </a>
+                    <div id="ecran-8" class="carroussel__ecran">
+                        <figure class="carroussel__image">
+                            <img src="/public/image/centre_le_corbusier.webp" alt="image ecran 8">
+                        </figure>
+                            <a href="/fr/centre.html">
+                            <p class="carroussel__texte">Centre Le Corbusier</p>
+                        <figure class="carroussel__icone">
+                            <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                        </figure>
+                    </div>
+                            </a>
+                </div>
+                <ul class="caroussel__liste-liens">
+                    <li><a href="#ecran-1" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></li>
+                    <li><a href="#ecran-2" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></li>
+                    <li><a href="#ecran-3" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></li>
+                    <li><a href="#ecran-4" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></li>
+                    <li><a href="#ecran-5" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></li>
+                    <li><a href="#ecran-6" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-6'}"></a></li>
+                    <li><a href="#ecran-7" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-7'}"></a></li>
+                    <li><a href="#ecran-8" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-8'}"></a></li>
+                </ul>
     </div>
-</main>
-<footer>
-    <div>
+    </section>
+<footer class="footer container">
+    <div class="footer__logoLink" href="index.html">
         <a href="/fr/index.html">
-            <img src="/public/icones/logo.svg" alt="logo du site">
+            <img  class="footer__debut-image" src="/public/icones/logo.svg" alt="logo du site">
          </a>
-        <h4>CorbuExpo</h4>
+        <h4 class="footer__debut-texte">CorbuExpo</h4>
     </div>
-    <div>
-        <h5>MENTIONS LÉGALES</h5>
-        <p>Projet réalisé dans le cadre d’un exercice pédagogique au département
+    <div class="footer__mentionslegales">
+        <h5 class="footer__titre">MENTIONS LÉGALES</h5>
+        <p class="footer__texte">Projet réalisé dans le cadre d’un exercice pédagogique au département
             <a href="https://mmimontbeliard.com/">MMI de Montbéliard</a>
         </p>
     </div>
-    <div>
-        <h5>CONTACT</h5>
-        <p>
-            hugo.collin@edu.univ-fcomte.com
-            +33 6 45 12 54 80
+    <div class="footer__contact">
+        <h5 class="footer__titre">CONTACT</h5>
+        <p class="footer__texte">
+            hugo.collin@edu.univ-fcomte.com<br>
+            +33 6 45 12 54 80<br>
             Département MMI Montébiard
         </p>
     </div>
-    <div>
-        <h5>NOUS SUIVRE</h5>
-        <ul>
+    <div class="footer__social">
+        <h5 class="footer__titre">NOUS SUIVRE</h5>
+        <ul class="footer liste liste-unstyled">
             <li><a href="https://www.facebook.com/people/Le-Corbusier/100050220261290/" aria-label="facebook">
                 <img src="/public/icones/facebook.svg" alt="facebook">
             </a></li>
-            <li><a href="https://www.instagram.com/fondationlecorbusier/" arial-label="instagram">
+            <li><a href="https://www.instagram.com/fondationlecorbusier/" aria-label="instagram">
                 <img src="/public/icones/instagram.svg" alt="instagram">
             </a></li>
-            <li><a href="" arial-label="twitter">
+            <li><a href="" aria-label="twitter">
                 <img src="/public/icones/twitter.svg" alt="twitter">
             </a></li>
             <li><a href="https://www.youtube.com/watch?v=S879p0S4o7w" aria-label="youtube">
@@ -225,9 +296,9 @@
             </a></li>
         </ul>
     </div>
-    <div>
-        <img src="/public/icones/logo-MMI.svg" alt="logo MMI">
-        <p>COLLIN Hugo MM1 A1 </p>
+    <div class="footer__fin">
+        <img  class="footer__fin-logo" src="/public/icones/logo-MMI.svg" alt="logo MMI">
+        <p class="footer__fin-texte">COLLIN Hugo MM1 A1</p>
     </div>
 </footer>
 </body>
