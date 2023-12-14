@@ -3,14 +3,36 @@
 .hero__titre {
     color: var(--noir);
     font-size: 3rem;
+    margin-top: 120px;
+    margin-bottom: 0;
+
+
 }
 .hero__titre>span {
     color: var(--jaune);
     font-size: 3rem;
 }
 .hero__image {
-  position: absolute;
+  position:relative;
   inset: 0;
   z-index: -1;
   margin: 0;
+  margin-top: -100px;
+  
+  
 }
+.hero__texte {
+    color: var(--noir);
+    font-family: var(--heading-5);
+    font-family: 'paytone one';
+    font-size: 1.2rem; 
+    margin-top: 0; 
+  }
+  .hero__icone {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+

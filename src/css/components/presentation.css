@@ -1,0 +1,36 @@
+.presentation .container {}
+
+.presentation__texte {
+  font-family: 'montserra', sans-serif;
+  font-size: 1.88rem;
+  font-size: var(--body-1);
+  color: var(--blanc);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-block-end: 50px;
+}
+.presentation__nombre {
+    font-family: 'paytone one';
+    font-size: 2.5rem;
+    font-size: var(--heading-3);
+    color: var(--jaune);
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.presentation__texte--nombre {
+    font-family: 'paytone one';
+    font-size: 1.75rem;
+    font-size: var(--heading-4);
+    color: var(--jaune);
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    white-space: pre-line;
+    margin-top: -35px;
+    margin-block-end: 100px;
+}
