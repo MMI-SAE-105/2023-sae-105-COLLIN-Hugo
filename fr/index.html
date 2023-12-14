@@ -9,132 +9,145 @@
 </head>
 
 <body>
-    <header>
-<div>
+    <header class="header">
+<div class="header__debut">
     <a href="/">
         <img src="/public/icones/logo.svg" alt="logo du site">
     </a>
 </div>
-<div>
+<nav class="header__debut-langue">
+    <a href="/en/index.html">
+        <img src="/public/icones/en.svg" alt="bouton changement de langue">
+    </a>
+</nav>
+<div class="header__fin">
     <button class="header__menu-btn menu-btn">
         <span class="menu-btn__hamburger"></span>
     </button>
+</div>
 
-    <nav>
-        <ul>
-        <li>
-            <a href="/fr/corbusier.html">Le Corbusier</a>
+    <nav class="header__menu menu">
+        <ul class="menu__liste liste-unstyled">
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/corbusier.html">Le Corbusier</a>
         </li>
-        <li>
-            <a href="/fr/unité.html">L’unité d’Habitation</a>
+        <li class="menu__titre">
+            <a  class="menu__lien" href="/fr/unité.html">L’unité d’Habitation</a>
         </li>
-        <li>
-            <a href="/fr/villa-savoye.html">La villa Savoye</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/villa-savoye.html">La villa Savoye</a>
         </li>
-        <li>
-            <a href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
         </li>
-        <li>
-            <a href="/fr/tourette.html">La tourette</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/tourette.html">La tourette</a>
         </li>
-        <li>
-            <a href="/fr/centre.html">Le centre Le Corbusier</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/centre.html">Le centre Le Corbusier</a>
         </li>
-        <li>
-            <a href="/fr/cabanon.html">Le cabanon de vacances</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/cabanon.html">Le cabanon de vacances</a>
         </li>
-        <li>
-            <a href="/fr/planeix.html">Maison Planeix</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/planeix.html">Maison Planeix</a>
         </li>
-        <li>
-            <a href="/fr/clarte.html">L’immeuble Clarté</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/clarte.html">L’immeuble Clarté</a>
         </li>
-        <li>
-            <a href="/fr/contact.html">Contactez-nous</a>
+        <li class="menu__titre">
+            <a class="menu__lien" href="/fr/contact.html">Contactez-nous</a>
         </li>
     </ul>
 </nav>
-</div>
 </header>
 <main>
-    <div>
-        <div>
-            <h1>CorbuExpo</h1>
-            <button></button>
-            <figure>
+    <div class="hero">
+        <div class="hero__debut container">
+            <h1 class="hero__titre">Corbu<span>Expo</span></h1>
+
+            <a href="#descendre"><img src="/public/icones/flèche-remonte.svg"></a>
+
+            <figure class="hero__image">
                 <img src="/public/image/corbusier.webp" alt="Le Corbusier">
             </figure>
         </div>
     </div>
+    <div class="presentation container" id="descendre">
     <p>Le Corbusier en quelques chiffres</p>
-    <h3>17</h3>
-    <h4>Oeuvres à UNESCO</h4>
-    <h3>75</h3>
-    <h4>Projets architecturaux</h4>
-<div>
-    <div>
+    <ul class="presentation__liste liste-unstyled">
+        <li class="presentation__titre">
+            <span class="presentation__nombre">17</span>Oeuvres à UNESCO
+        </li>
+        <li class="presentation__titre">
+            <span class="presentation__nombre">75</span>Projets architecturaux
+        </li>
+    </ul>
+    </div>
+<div class="carrousel">
+    <div class="carrousel__element">
         <a href="/fr/planeix.html">
-        <img src="/public/image/planeix.webp" alt="maison planeix">
-        <p>Maison Planeix (1924)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
-    </a>
+        <img class="carrousel__image" src="/public/image/planeix.webp" alt="maison planeix">
+        <p class="carrousel__texte">Maison Planeix (1924)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
+    </a>texte
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/villa-savoye.html">
-        <img src="/public/image/villa_savoye.webp" alt="villa savoye">
-        <p>Villa Savoye (1928-1931)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt"> 
+        <img class="carrousel__image" src="/public/image/villa_savoye.webp" alt="villa savoye">
+        <p class="carrousel__texte">Villa Savoye (1928-1931)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt"> 
     </a>
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/clarte.html">
-        <img src="/public/image/immeuble-clarte.webp" alt="immeuble clarté">
-        <p>Immeuble Clarté (1930)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
+        <img class="carrousel__image" src="/public/image/immeuble-clarte.webp" alt="immeuble clarté">
+        <p class="carrousel__texte">Immeuble Clarté (1930)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
     </a>
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/unite.html">
-        <img src="/public/image/unite_habitation.jpg" alt="unité d'habitation">
-        <p>Unité d'Habitation (1947-1952)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
+        <img class="carrousel__image" src="/public/image/unite_habitation.jpg" alt="unité d'habitation">
+        <p class="carrousel__texte">Unité d'Habitation (1947-1952)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
     </a>
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/cabanon.html">
-        <img src="/public/image/cabanon_le_corbusier.webp" alt="cabanon">
-        <p>Cabanon de Le Corbusier (1952)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
+        <img class="carrousel__image" src="/public/image/cabanon_le_corbusier.webp" alt="cabanon">
+        <p class="carrousel__texte">Cabanon de Le Corbusier (1952)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
      </a>
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/chapelle.html">
-        <img src="/public/image/chapelle.webp" alt="Chapelle Notre dame du haut">
-        <p>Chapelle Notre-Dame-du-Haut (1950-1955)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
+        <img class="carrousel__image" src="/public/image/chapelle.webp" alt="Chapelle Notre dame du haut">
+        <p class="carrousel__texte">Chapelle Notre-Dame-du-Haut (1950-1955)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
     </a>
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/tourette.html">
-        <img src="/public/image/tourette.webp" alt="La tourette">
-        <p>La Tourette (1956-1960)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
+        <img class="carrousel__image" src="/public/image/tourette.webp" alt="La tourette">
+        <p class="carrousel__texte">La Tourette (1956-1960)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
     </a>
     </div>
-    <div>
+    <div class="carrousel__element">
         <a href="/fr/centre.html">
-        <img src="/public/image/centre_le_corbusier.webp" alt="Centre Le Corbusier">
-        <p>Centre Le Corbusier (1962)</p>
-        <img src="/public/icones/touch-app.svg" alt="doigt">
+        <img class="carrousel__image" src="/public/image/centre_le_corbusier.webp" alt="Centre Le Corbusier">
+        <p class="carrousel__texte">Centre Le Corbusier (1962)</p>
+        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
     </a>
     </div>
 </div>
-    <div>
-        <a href="/public/icones/arrowLine.svg">Voir plus</a>
-    </div>
-<section>
-        <figure>
-            <img src="/public/image/img_accueil.webp" alt="lieu_exposition">
+
+<a href="/public/icones/arrowLine.svg">Voir plus</a>
+
+<section class="couleur">
+        <figure class="info">
+            <img class="info__image" src="/public/image/img_accueil.webp" alt="lieu_exposition">
         </figure>
     <h4>1 mois d’immersion dans la vie du Corbusier</h4>
     <p>Du 13 avril au 23 juin 2024, plongez dans l'univers visionnaire de l'architecte 
@@ -155,7 +168,7 @@
         CorbuExpo promet une expérience captivante pour les amateurs d'art, les passionnés d'architecture et tous ceux en quête d'inspiration.
         Réservez vos billets dès maintenant pour une plongée immersive dans l'esprit novateur de l'un des maîtres de l'architecture moderne.
     </p>
-<section>
+<section class="couleur">
     <h4>Tarifs</h4>
     <p>Découvrez CorbuExpo à la Fondation Cartier à des tarifs accessibles : le plein tarif est de 11€, le tarif réduit est de 7,50€,
          et les jeunes de 13 à 25 ans bénéficient d'une réduction à 5€. Profitez du Fondation Cartier Pass, disponible à 18€ ou 50€. 
@@ -167,37 +180,37 @@
     </div>
 </section>
 </main>
-<footer>
-    <div>
+<footer class="footer">
+    <div class="footer__debut">
         <a href="/fr/index.html">
-            <img src="/public/icones/logo.svg" alt="logo du site">
+            <img  class="footer__debut-image" src="/public/icones/logo.svg" alt="logo du site">
          </a>
-        <h4>CorbuExpo</h4>
+        <h4 class="footer__debut-texte">CorbuExpo</h4>
     </div>
-    <div>
-        <h5>MENTIONS LÉGALES</h5>
-        <p>Projet réalisé dans le cadre d’un exercice pédagogique au département
+    <div class="footer__">
+        <h5 class="footer__titre">MENTIONS LÉGALES</h5>
+        <p class="footer__texte">Projet réalisé dans le cadre d’un exercice pédagogique au département
             <a href="https://mmimontbeliard.com/">MMI de Montbéliard</a>
         </p>
     </div>
-    <div>
-        <h5>CONTACT</h5>
-        <p>
+    <div class="footer__">
+        <h5 class="footer__titre">CONTACT</h5>
+        <p class="footer__texte">
             hugo.collin@edu.univ-fcomte.com
             +33 6 45 12 54 80
             Département MMI Montébiard
         </p>
     </div>
-    <div>
-        <h5>NOUS SUIVRE</h5>
-        <ul>
+    <div class="footer__social">
+        <h5 class="footer__titre">NOUS SUIVRE</h5>
+        <ul class="footer liste liste-unstyled">
             <li><a href="https://www.facebook.com/people/Le-Corbusier/100050220261290/" aria-label="facebook">
                 <img src="/public/icones/facebook.svg" alt="facebook">
             </a></li>
-            <li><a href="https://www.instagram.com/fondationlecorbusier/" arial-label="instagram">
+            <li><a href="https://www.instagram.com/fondationlecorbusier/" aria-label="instagram">
                 <img src="/public/icones/instagram.svg" alt="instagram">
             </a></li>
-            <li><a href="" arial-label="twitter">
+            <li><a href="" aria-label="twitter">
                 <img src="/public/icones/twitter.svg" alt="twitter">
             </a></li>
             <li><a href="https://www.youtube.com/watch?v=S879p0S4o7w" aria-label="youtube">
@@ -205,9 +218,9 @@
             </a></li>
         </ul>
     </div>
-    <div>
-        <img src="/public/icones/logo-MMI.svg" alt="logo MMI">
-        <p>COLLIN Hugo MM1 A1 </p>
+    <div class="footer__fin">
+        <img  class="footer__fin-logo" src="/public/icones/logo-MMI.svg" alt="logo MMI">
+        <p class="footer__fin-texte">COLLIN Hugo MM1 A1</p>
     </div>
 </footer>
 </body>
