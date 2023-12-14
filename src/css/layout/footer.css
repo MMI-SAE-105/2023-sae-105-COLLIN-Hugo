@@ -1,5 +1,6 @@
 .footer {
     background-color: var(--jaune);
+    margin-top: 100px;
 }
 .footer__logoLink {
     display: flex;

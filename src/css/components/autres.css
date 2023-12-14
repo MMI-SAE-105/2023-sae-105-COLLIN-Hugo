@@ -1,0 +1,7 @@
+.paragraphe__liste {
+  font-family: 'noto sans', sans-serif;
+  font-size: var(--body-3);
+  color: var(--blanc);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

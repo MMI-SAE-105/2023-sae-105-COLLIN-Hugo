@@ -1,90 +1,90 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="icon" href="/public/icones/logo.svg">
     <link rel="stylesheet" href="/src/css/style.css">
+    <script src="/src/script.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+    <body x-data="{ atTop: true }">
 
-<body>
-    <header>
-<div>
-    <a href="/">
-        <img src="/public/icones/logo.svg" alt="logo du site">
-    </a>
-</div>
-<div>
-    <button class="header__menu-btn menu-btn">
-        <span class="menu-btn__hamburger"></span>
-    </button>
-
-    <nav>
-        <ul>
-        <li>
-            <a href="/fr/corbusier.html">Le Corbusier</a>
-        </li>
-        <li>
-            <a href="/fr/unite.html">L’unité d’Habitation</a>
-        </li>
-        <li>
-            <a href="/fr/villa-savoye.html">La villa Savoye</a>
-        </li>
-        <li>
-            <a href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
-        </li>
-        <li>
-            <a href="/fr/tourette.html">La tourette</a>
-        </li>
-        <li>
-            <a href="/fr/centre.html">Le centre Le Corbusier</a>
-        </li>
-        <li>
-            <a href="/fr/cabanon.html">Le cabanon de vacances</a>
-        </li>
-        <li>
-            <a href="/fr/planeix.html">Maison Planeix</a>
-        </li>
-        <li>
-            <a href="/fr/clarte.html">L’immeuble Clarté</a>
-        </li>
-        <li>
-            <a href="/fr/contact.html">Contactez-nous</a>
-        </li>
-    </ul>
-</nav>
-</div>
+        <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+          :class="{ 'header--atTop' : }">
+          <div class="header__start">
+            <a href="/fr/index.html">
+              <img class="header__logo" src="/public/icones/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-controls="mainNav"
+              @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+              <span class="menu-btn__bar"></span>
+            </button>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+              <ul class="menu__list list-unstyled">
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/corbusier.html">Le corbusier</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/unite.html">L'unité d'habitation</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/villa-savoye.html">La villa savoye</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/centre.html">Le centre Le Corbusier</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/cabanon.html">Le cabanon de vacances</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/planeix.html">La maison Planeix</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/clarte.html">L'immeuble Clarté</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
 </header>
 <main>
-    <h4>Le cabanon de vacances</h4>
-    <p>Le site du Cap Martin, avec son cabanon, figure au patrimoine mondial de l'UNESCO. Géré par l'association Cap Moderne, 
+    <h4 class="titre__h4">Le cabanon de vacances</h4>
+    <p class="chapo__article">Le site du Cap Martin, avec son cabanon, figure au patrimoine mondial de l'UNESCO. Géré par l'association Cap Moderne, 
         il offre des visites, témoignant des idées architecturales de Le Corbusier sur la standardisation et la modernité.
     </p>
-    <div>
-        <figure>
+    <div class="image__article">
+        <figure class="image__article-cabanon">
             <img src="/public/image/cabanon_le_corbusier.webp" alt="le cabanon de vacances">
-            <figcaption>Provient du site « wikipédia », Le cabanon le Corbusier</figcaption>
+            <figcaption class="image__legende">Provient du site « wikipédia », Le cabanon le Corbusier</figcaption>
         </figure>
     </div>
-    <div>
-        <h5>Patrimoine</h5>
-        <p>Le Site corbuséen du Cap Martin est un ensemble de construction réalisé par Le Corbusier accessible seulement 
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">Patrimoine</h5>
+        <p class="paragraphe__texte">Le Site corbuséen du Cap Martin est un ensemble de construction réalisé par Le Corbusier accessible seulement 
             par le sentier du littoral dit des douaniers, à Roquebrune-Cap-Martin dans les Alpes-Maritimes en France. 
             Le cabanon de Le Corbusier est un témoignage de ses réflexions sur la production standardisée. 
             Le site a été inscrit, avec 16 autres œuvres architecturales de Le Corbusier, sur la liste du patrimoine mondial 
             de l'UNESCO en 2016.
         </p>
     </div>
-    <div>
-        <h5>Histoire</h5>
-        <p>Le site corbuséen de Roquebrune-Cap Martin comprend :</p>
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">Histoire</h5>
+        <p class="paragraphe__texte">Le site corbuséen de Roquebrune-Cap Martin comprend :</p>
         <ul>
-            <li>la guinguette « L’Étoile de Mer », édifiée par le cabaretier Rebutato en 1948-1949,</li>
-            <li>le cabanon mitoyen ajouté par Le Corbusier en 1952,</li>
-            <li>les unités de camping, juxtaposition de cinq cellules identiques construites en 1954-1957.</li>
+            <li class="paragraphe__liste">la guinguette « L’Étoile de Mer », édifiée par le cabaretier Rebutato en 1948-1949,</li>
+            <li class="paragraphe__liste">le cabanon mitoyen ajouté par Le Corbusier en 1952,</li>
+            <li class="paragraphe__liste">les unités de camping, juxtaposition de cinq cellules identiques construites en 1954-1957.</li>
         </ul>
-        <p>Devenu peu à peu propriétaire de l'intégralité du site, le Conservatoire du littoral confie d'abord la gestion du site 
+        <p class="paragraphe__texte">Devenu peu à peu propriétaire de l'intégralité du site, le Conservatoire du littoral confie d'abord la gestion du site 
             à la commune de Roquebrune-Cap-Martin. Au cours de ses années de gestion, la commune a permis la sauvegarde du site 
             en accompagnant différentes actions parmi lesquelles d'importants travaux de restauration notamment sur la villa E-1027. 
             Des visites du cabanon et de l'Étoile de Mer sont alors régulièrement organisées sur réservation par l'office de tourisme.
@@ -93,9 +93,9 @@
             dotation Eileen Gray Le Corbusier à Cap Martin.
         </p>
     </div>
-    <div>
-        <h5>Monument</h5>
-        <p>Le site corbuséen a été inscrit le 25 mars 1994 et le cabanon a été classé le 3 septembre 1996 au titre des monuments historiques.
+    <div class="paragraphe">
+        <h5 class="paragraphe__titre">Monument</h5>
+        <p class="paragraphe__texte">Le site corbuséen a été inscrit le 25 mars 1994 et le cabanon a été classé le 3 septembre 1996 au titre des monuments historiques.
             Le site a reçu le « Label Patrimoine du XXe » siècle par arrêté du 1er mars 2001.
             La candidature de plusieurs sites construits par Le Corbusier (dont le cabanon) au patrimoine mondial de 
             l'UNESCO a déjà été refusée en 2009 puis en 2011 en raison d'une liste trop longue et l’absence du site de Chandigarh en Inde. 
@@ -105,37 +105,37 @@
         </p>
     </div>
 </main>
-<footer>
-    <div>
+<footer class="footer container">
+    <div class="footer__logoLink" href="index.html">
         <a href="/fr/index.html">
-            <img src="/public/icones/logo.svg" alt="logo du site">
+            <img  class="footer__debut-image" src="/public/icones/logo.svg" alt="logo du site">
          </a>
-        <h4>CorbuExpo</h4>
+        <h4 class="footer__debut-texte">CorbuExpo</h4>
     </div>
-    <div>
-        <h5>MENTIONS LÉGALES</h5>
-        <p>Projet réalisé dans le cadre d’un exercice pédagogique au département
+    <div class="footer__mentionslegales">
+        <h5 class="footer__titre">MENTIONS LÉGALES</h5>
+        <p class="footer__texte">Projet réalisé dans le cadre d’un exercice pédagogique au département
             <a href="https://mmimontbeliard.com/">MMI de Montbéliard</a>
         </p>
     </div>
-    <div>
-        <h5>CONTACT</h5>
-        <p>
-            hugo.collin@edu.univ-fcomte.com
-            +33 6 45 12 54 80
+    <div class="footer__contact">
+        <h5 class="footer__titre">CONTACT</h5>
+        <p class="footer__texte">
+            hugo.collin@edu.univ-fcomte.com<br>
+            +33 6 45 12 54 80<br>
             Département MMI Montébiard
         </p>
     </div>
-    <div>
-        <h5>NOUS SUIVRE</h5>
-        <ul>
+    <div class="footer__social">
+        <h5 class="footer__titre">NOUS SUIVRE</h5>
+        <ul class="footer liste liste-unstyled">
             <li><a href="https://www.facebook.com/people/Le-Corbusier/100050220261290/" aria-label="facebook">
                 <img src="/public/icones/facebook.svg" alt="facebook">
             </a></li>
-            <li><a href="https://www.instagram.com/fondationlecorbusier/" arial-label="instagram">
+            <li><a href="https://www.instagram.com/fondationlecorbusier/" aria-label="instagram">
                 <img src="/public/icones/instagram.svg" alt="instagram">
             </a></li>
-            <li><a href="" arial-label="twitter">
+            <li><a href="" aria-label="twitter">
                 <img src="/public/icones/twitter.svg" alt="twitter">
             </a></li>
             <li><a href="https://www.youtube.com/watch?v=S879p0S4o7w" aria-label="youtube">
@@ -143,9 +143,9 @@
             </a></li>
         </ul>
     </div>
-    <div>
-        <img src="/public/icones/logo-MMI.svg" alt="logo MMI">
-        <p>COLLIN Hugo MM1 A1 </p>
+    <div class="footer__fin">
+        <img  class="footer__fin-logo" src="/public/icones/logo-MMI.svg" alt="logo MMI">
+        <p class="footer__fin-texte">COLLIN Hugo MM1 A1</p>
     </div>
 </footer>
 </body>

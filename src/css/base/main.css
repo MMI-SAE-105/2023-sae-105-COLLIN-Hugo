@@ -5,10 +5,56 @@ video {
 }
 body {
   margin: 0;
-  background-color: brown;
+  background-color: var(--noir);
   
 }
 .noscroll,
 .noscroll body {
   overflow: hidden;
+}
+.titre__h4 {
+  padding-top: 60px;
+  margin-top: 60px;
+  color: var(--jaune);
+  font-size: var(--heading-4);
+  font-family: 'paytone one';
+  margin-left: 1rem;
+}
+.paragraphe__titre {
+  font-family: 'paytone one';
+  font-size: var(--heading-5);
+  color: var(--jaune);
+  margin-top: 30px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: -25px;
+}
+.paragraphe__texte {
+  font-family: 'noto sans', sans-serif;
+  font-size: var(--body-3);
+  color: var(--blanc);
+  margin-top: 30px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+}
+.chapo__article {
+  font-family: 'noto sans', sans-serif;
+  font-size: var(--body-3);
+  color: var(--blanc);
+  margin-top: 30px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.image__article {
+  position: relative;
+  margin-top: 30px;
+
+
+}
+.image__legende {
+  font-family: 'noto sans', sans-serif;
+  color: var(--blanc);
+  font-size: var(--body-4);
+  margin-left: 1.5rem;
 }
