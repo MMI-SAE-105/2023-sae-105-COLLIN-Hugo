@@ -62,7 +62,7 @@
             <h1 class="hero__titre">Corbu<span>Expo</span></h1>
             <p class="hero__texte">Rendez-vous du 15 avril au 23 juin 2024</p>
 
-            <a class="hero__icone" href="#descendre"><img src="/public/icones/flèche-remonte.svg"></a>
+            <a class="hero__icone" href="#descendre"><img src="/public/icones/fleche-remonte.svg"></a>
 
             <figure class="hero__image">
                 <img src="/public/image/corbusier.webp" alt="Le Corbusier">
@@ -77,65 +77,136 @@
     
     <p class="presentation__texte--nombre">Projets <br>architecturaux</p>
     </div>
-
-<div class="carrousel">
-    <div class="carrousel__element">
-        <a href="/fr/planeix.html">
-        <img class="carrousel__image" src="/public/image/planeix.webp" alt="maison planeix">
-        <p class="carrousel__texte">Maison Planeix (1924)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-    </a>texte
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/villa-savoye.html">
-        <img class="carrousel__image" src="/public/image/villa_savoye.webp" alt="villa savoye">
-        <p class="carrousel__texte">Villa Savoye (1928-1931)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt"> 
-    </a>
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/clarte.html">
-        <img class="carrousel__image" src="/public/image/immeuble-clarte.webp" alt="immeuble clarté">
-        <p class="carrousel__texte">Immeuble Clarté (1930)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-    </a>
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/unite.html">
-        <img class="carrousel__image" src="/public/image/unite_habitation.jpg" alt="unité d'habitation">
-        <p class="carrousel__texte">Unité d'Habitation (1947-1952)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-    </a>
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/cabanon.html">
-        <img class="carrousel__image" src="/public/image/cabanon_le_corbusier.webp" alt="cabanon">
-        <p class="carrousel__texte">Cabanon de Le Corbusier (1952)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-     </a>
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/chapelle.html">
-        <img class="carrousel__image" src="/public/image/chapelle.webp" alt="Chapelle Notre dame du haut">
-        <p class="carrousel__texte">Chapelle Notre-Dame-du-Haut (1950-1955)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-    </a>
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/tourette.html">
-        <img class="carrousel__image" src="/public/image/tourette.webp" alt="La tourette">
-        <p class="carrousel__texte">La Tourette (1956-1960)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-    </a>
-    </div>
-    <div class="carrousel__element">
-        <a href="/fr/centre.html">
-        <img class="carrousel__image" src="/public/image/centre_le_corbusier.webp" alt="Centre Le Corbusier">
-        <p class="carrousel__texte">Centre Le Corbusier (1962)</p>
-        <img class="carrousel__icone" src="/public/icones/touch-app.svg" alt="doigt">
-    </a>
-    </div>
+<section class="carroussel container">
+    <div x-data="{
+            hrefCourant: '#ecran-1',
+            hrefCourant: '#ecran-2',
+            hrefCourant: '#ecran-3',
+            hrefCourant: '#ecran-4',
+            hrefCourant: '#ecran-5',
+    }">
+    <button class="carroussel__btn carroussel__btn-avant" aria-label="slide precedant" @click="parent = $refs.parent; parent.scrollLeft -= parent.clientWidth">
+                &lt;
+    </button>
+    <button class="carroussel__btn carroussel__btn-apres" aria-label="slide suivant" @click="parent = $refs.parent; parent.scrollLeft += parent.clientWidth">
+                &gt;
+            </button>
+            <div class="carroussel__parent-ecrans" x-ref="parent"
+            @scroll.debounce.250ms.passive="
+            hrefCourant = '#'+
+                              [...$refs.parent.children]
+                               .find(e=>e.getBoundingClientRect( ).x>=0)
+                               .id
+                                                 ">
+                <div id="ecran-1" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/planeix.webp" alt="image ecran 1">
+                    </figure>
+                        <div class="text">
+                        <a href="/fr/planeix.html">
+                        <p class="carroussel__texte">Maison Planeix (1924)</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                        </div>
+                        </a>
+                </div>
+                <div id="ecran-2" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/villa_savoye.webp" alt="image ecran 2">
+                    </figure>
+                        <div>
+                        <a href="/fr/villa-savoye.html">
+                        <p class="carroussel__texte">Villa Savoye (1928-1931)</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                        </div>
+                        </a>
+                </div>
+                <div id="ecran-3" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/immeuble-clarte.webp" alt="image ecran 3">
+                    </figure>
+                        <div>
+                        <a href="/fr/clarte.html">
+                        <p class="carroussel__texte">Immeuble Clarté (1930)</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                </div>
+                        </a>
+                </div>
+                <div id="ecran-4" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/unite-habitation.webp" alt="image ecran 4">
+                    </figure>
+                        <div>
+                        <a href="/fr/unite.html">
+                        <p class="carroussel__texte">Unité d'Habitation (1947-1952)</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                </div>
+                        </a>
+                </div>
+                <div id="ecran-5" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/cabanon_le_corbusier.webp" alt="image ecran 5">
+                    </figure>
+                        <a href="/fr/cabanon.html">
+                        <p class="carroussel__texte">Cabanon de vacances (1952)</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                </div>
+                        </a>
+                <div id="ecran-6" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/chapelle.webp" alt="image ecran 6">
+                    </figure>
+                        <a href="/fr/chapelle.html">
+                        <p class="carroussel__texte">Chapelle Notre-Dame-du-Haut</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                </div>
+                        </a>
+                <div id="ecran-7" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/tourette.webp" alt="image ecran 7">
+                    </figure>
+                        <a href="/fr/tourette.html">
+                        <p class="carroussel__texte">La tourette (1956-1960)</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                </div>
+                        </a>
+                <div id="ecran-8" class="carroussel__ecran">
+                    <figure class="carroussel__image">
+                        <img src="/public/image/centre_le_corbusier.webp" alt="image ecran 8">
+                    </figure>
+                        <a href="/fr/centre.html">
+                        <p class="carroussel__texte">Centre Le Corbusier</p>
+                    <figure class="carroussel__icone">
+                        <img class="carroussel__icone-image" src="/public/icones/touch-app.svg" alt="doigt">
+                    </figure>
+                </div>
+                        </a>
+            </div>
+            <ul class="caroussel__liste-liens">
+                <li><a href="#ecran-1" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-1'}"></a></li>
+                <li><a href="#ecran-2" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-2'}"></a></li>
+                <li><a href="#ecran-3" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-3'}"></a></li>
+                <li><a href="#ecran-4" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-4'}"></a></li>
+                <li><a href="#ecran-5" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-5'}"></a></li>
+                <li><a href="#ecran-6" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-6'}"></a></li>
+                <li><a href="#ecran-7" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-7'}"></a></li>
+                <li><a href="#ecran-8" class="caroussel__lien" :class="{actif:hrefCourant==='#ecran-8'}"></a></li>
+            </ul>
 </div>
+</section>
 <div class="parent-container">
 <a href="/public/icones/arrowLine.svg" class="bouton__jaune">Voir plus</a>
 </div>

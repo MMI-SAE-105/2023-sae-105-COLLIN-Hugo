@@ -1,0 +1,107 @@
+.carroussel__texte {
+    font-family: 'paytone one';
+    font-size: var(--heading-5);
+    text-decoration: none;
+    color: var(--noir);
+
+  }
+  .carroussel__image {
+    width: 300px;
+    height: 200px;
+  
+    margin-left: 3rem;
+  }
+
+    .carroussel__parent-ecrans {
+      display: flex;
+      width: 100% ;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+  
+    .carroussel__ecran {
+      flex: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .carroussel__ecran figure {
+      margin: 0;
+    }
+  
+    .carroussel {
+      position: relative;
+    }
+  
+    .carroussel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); 
+      width: 2rem;
+      height: 2rem;
+      background: rgba(0,0,0,0.5);
+      border-radius: 30%;
+      border: none;
+      display: grid;
+      place-content: center;
+      color: #000;
+    }
+  
+    .carroussel__btn-avant {
+      left: 0;
+    }
+  
+    .carroussel__btn-apres {
+      right: 0;
+    }
+   
+    .carroussel__liste-liens {
+      justify-content: center;
+      display: flex; 
+      justify-self: center;
+      margin-left: 0 auto; 
+      padding: none ; 
+      list-style: none ; 
+      gap: 2rem; 
+      align-items: center;
+      margin-top: 20px; 
+    }
+  
+    .carroussel__lien {
+      color: #F5F7C3;
+      border: 1px solid #fff; 
+      padding: 0.5rem 1rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 5px; 
+      cursor: pointer;
+      background-color: #aaa; 
+    }
+  
+    .carroussel {
+      position: relative;
+      width: 100%; 
+      overflow: hidden;
+    }
+  
+    .carroussel__parent-ecrans {
+      display: flex;
+      width: 100%;
+      transition: transform 0.3s ease; 
+    }
+  
+    .carroussel__ecran {
+      flex: none;
+      width: 100%;
+      scroll-snap-align: start; 
+    }
+  
+    .carroussel__liste-liens a.actif {
+      background-color: #000; 
+    }
+    .text {
+        display: flex;
+        background-color: var(--jaune);
+    }

@@ -46,6 +46,7 @@
     background-color: #ECEFF1;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
     transition-duration: .25s;
+    
   }
   .menu__item {
     display: block;
@@ -122,6 +123,21 @@
     height: 70px;
     display: grid;
     z-index: 4;
+    margin-right: 0.8rem;
+    margin-top: 10px;
+  }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 60px;
+    display: grid;
+    z-index: 4;
+    margin-left: 1rem;
+    margin-top: 1px;
   }
     
     

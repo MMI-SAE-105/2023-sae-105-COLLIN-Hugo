@@ -39,12 +39,13 @@
     text-decoration: none;
 }
 .footer__social {
-    display: flex;
+
 }
 
 .footer__fin {
     display: flex;
     align-items: center;
+
 }
 .footer__fin-logo {
     margin-left: 1rem;
