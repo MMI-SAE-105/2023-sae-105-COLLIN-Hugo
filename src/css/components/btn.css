@@ -1,0 +1,25 @@
+.parent-container {
+    display: flex;
+    justify-content: center;
+  }
+.bouton__jaune {
+    display: inline-block;
+    padding: 8px 20px;;
+    color: var(--jaune);
+    border: 2px solid var(--jaune);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'paytone one';
+    margin-bottom: 70px;
+}
+.bouton__noir {
+    display: inline-block;
+    padding: 10px 40px;;
+    color: var(--noir);
+    border: 2px solid var(--noir);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: 'paytone one';
+}

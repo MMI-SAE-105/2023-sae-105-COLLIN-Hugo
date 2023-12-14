@@ -49,9 +49,11 @@
   }
   .menu__item {
     display: block;
+    align-items: center;
     padding: 12px 24px;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
+    color: var(--blanc);
+    font-family: 'paytone one';
+    
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -85,7 +87,7 @@
     left: 0;
     width: 390vw;
     height: 91vh;
-    background-color: var(--blanc);
+    background-color: var(--noir);
     display: grid;
     place-content: center;
     position: relative;

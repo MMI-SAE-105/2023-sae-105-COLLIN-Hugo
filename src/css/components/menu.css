@@ -3,7 +3,7 @@
   opacity: 0;
   position: fixed;
   inset: 0;
-  background-color: var(--brand-violet);
+  background-color: var(--noir);
   font-size: var(--text-xl);
   letter-spacing: var(--letter-spacing);
   transition: all 0.4s ease-in-out;
