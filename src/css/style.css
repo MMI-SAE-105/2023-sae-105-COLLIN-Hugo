@@ -1,2 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&family=Noto+Sans:wght@100;400&family=Paytone+One&display=swap');
 @import "vendor/normalize.css";
+
+/* Utils */
+@import "utils/variables.css";
+
+/* Base */
+@import "base/main.css";
+@import "base/media.css";
+
+/* Layout */
+@import "layout/header.css";
+@import "layout/footer.css";
+@import "layout/section.css";
+
+/* Components */
+@import "components/menu.css";
+@import "components/hero.css";
+@import "components/menuTheme.css";
+@import "components/presentation.css";
+@import "components/btn.css";
+@import "components/card.css";
+@import "components/carrousel.css";

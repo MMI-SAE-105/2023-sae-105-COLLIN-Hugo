@@ -1,0 +1,40 @@
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.menu-btn__bar,
+.menu-btn__bar::before,
+.menu-btn__bar::after {
+  content: "";
+  background-color: var(--gray-black);
+  display: block;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  z-index: 3;
+  transition: all 0.4s ease-in-out;
+}
+
+.menu-btn__bar::before {
+  top: -10px;
+}
+
+.menu-btn__bar::after {
+  top: 10px;
+}
+
+.menu-btn--open .menu-btn__bar,
+.menu-btn--open .menu-btn__bar::before,
+.menu-btn--open .menu-btn__bar::after {
+  background-color: var(--gray-white);
+  transform: rotate(135deg);
+}
+
+.menu-btn--open .menu-btn__bar::before,
+.menu-btn--open .menu-btn__bar::after {
+  transform: rotate(90deg);
+  top: 0;
+}

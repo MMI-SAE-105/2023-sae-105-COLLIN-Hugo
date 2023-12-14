@@ -6,60 +6,60 @@
     <title>Document</title>
     <link rel="icon" href="/public/icones/logo.svg">
     <link rel="stylesheet" href="/src/css/style.css">
+    <script src="/src/script.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
+    <body x-data="{ atTop: true }">
 
-<body>
-    <header class="header">
-<div class="header__debut">
-    <a href="/">
-        <img src="/public/icones/logo.svg" alt="logo du site">
-    </a>
-</div>
-<nav class="header__debut-langue">
-    <a href="/en/index.html">
-        <img src="/public/icones/en.svg" alt="bouton changement de langue">
-    </a>
-</nav>
-<div class="header__fin">
-    <button class="header__menu-btn menu-btn">
-        <span class="menu-btn__hamburger"></span>
-    </button>
-</div>
-
-    <nav class="header__menu menu">
-        <ul class="menu__liste liste-unstyled">
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/corbusier.html">Le Corbusier</a>
-        </li>
-        <li class="menu__titre">
-            <a  class="menu__lien" href="/fr/unité.html">L’unité d’Habitation</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/villa-savoye.html">La villa Savoye</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/tourette.html">La tourette</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/centre.html">Le centre Le Corbusier</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/cabanon.html">Le cabanon de vacances</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/planeix.html">Maison Planeix</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/clarte.html">L’immeuble Clarté</a>
-        </li>
-        <li class="menu__titre">
-            <a class="menu__lien" href="/fr/contact.html">Contactez-nous</a>
-        </li>
-    </ul>
-</nav>
+        <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
+          :class="{ 'header--atTop' : }">
+          <div class="header__start">
+            <a href="/">
+              <img class="header__logo" src="/public/icones/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__end">
+            <button class="header__menu-btn menu-btn" aria-label="menu" aria-controls="mainNav"
+              @pointerdown="menuIsOpen = !menuIsOpen" :class="menuIsOpen && 'menu-btn--open'">
+              <span class="menu-btn__bar"></span>
+            </button>
+            <nav class="header__menu menu" id="mainNav" :class="menuIsOpen && 'menu--open'">
+              <ul class="menu__list list-unstyled">
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/corbusier.html">Le corbusier</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/unite.html">L'unité d'habitation</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/villa-savoye.html">La villa savoye</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/chapelle.html">La chapelle Notre-Dame-du-Haut</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/fr/centre.html">Le centre Le Corbusier</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/cabanon.html">Le cabanon de vacances</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/planeix.html">La maison Planeix</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/clarte.html">L'immeuble Clarté</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="/fr/contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <nav class="header__debut-langue">
+            <a href="/en/index.html">
+                <img src="/public/icones/en.svg" alt="bouton changement de langue">
+            </a>
+        </nav>
 </header>
 <main>
     <div class="hero">
@@ -83,7 +83,7 @@
             <span class="presentation__nombre">75</span>Projets architecturaux
         </li>
     </ul>
-    </div>
+
 <div class="carrousel">
     <div class="carrousel__element">
         <a href="/fr/planeix.html">
