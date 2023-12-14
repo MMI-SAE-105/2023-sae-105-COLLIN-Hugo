@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{ menuIsOpen: false }">
+<html lang="fr" x-data="{ menuIsOpen: false }" :class="menuIsOpen && 'noscroll'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,24 +174,24 @@
     </div>
 </section>
 </main>
-<footer class="footer">
-    <div class="footer__debut">
+<footer class="footer container">
+    <div class="footer__logoLink" href="index.html">
         <a href="/fr/index.html">
             <img  class="footer__debut-image" src="/public/icones/logo.svg" alt="logo du site">
          </a>
         <h4 class="footer__debut-texte">CorbuExpo</h4>
     </div>
-    <div class="footer__">
+    <div class="footer__mentionslegales">
         <h5 class="footer__titre">MENTIONS LÉGALES</h5>
         <p class="footer__texte">Projet réalisé dans le cadre d’un exercice pédagogique au département
             <a href="https://mmimontbeliard.com/">MMI de Montbéliard</a>
         </p>
     </div>
-    <div class="footer__">
+    <div class="footer__contact">
         <h5 class="footer__titre">CONTACT</h5>
         <p class="footer__texte">
-            hugo.collin@edu.univ-fcomte.com
-            +33 6 45 12 54 80
+            hugo.collin@edu.univ-fcomte.com<br>
+            +33 6 45 12 54 80<br>
             Département MMI Montébiard
         </p>
     </div>
