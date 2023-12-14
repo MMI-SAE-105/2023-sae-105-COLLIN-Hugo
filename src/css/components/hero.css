@@ -1,0 +1,16 @@
+.hero {}
+
+.hero__titre {
+    color: var(--noir);
+    font-size: 3rem;
+}
+.hero__titre>span {
+    color: var(--jaune);
+    font-size: 3rem;
+}
+.hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  margin: 0;
+}

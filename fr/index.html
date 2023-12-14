@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{ menuIsOpen: false }">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
         <header class="header" @scroll.window="atTop = ( window.scrollY > 300 ? false : true )"
           :class="{ 'header--atTop' : }">
           <div class="header__start">
-            <a href="/">
+            <a href="/fr/index.html">
               <img class="header__logo" src="/public/icones/logo.svg" alt="logo" />
             </a>
           </div>
@@ -55,11 +55,6 @@
               </ul>
             </nav>
           </div>
-          <nav class="header__debut-langue">
-            <a href="/en/index.html">
-                <img src="/public/icones/en.svg" alt="bouton changement de langue">
-            </a>
-        </nav>
 </header>
 <main>
     <div class="hero">

@@ -1,0 +1,21 @@
+:root{
+    /* Color styles */
+--noir: rgba(14, 14, 14, 1);
+--jaune: rgba(250, 180, 51, 1);
+--blanc: rgba(243, 243, 243, 1);
+--gris: rgba(122, 122, 122, 1);
+--gris-clair: rgba(190, 190, 190, 1);
+--noir-pur: rgba(0, 0, 0, 1);
+
+/* Text-size styles */
+/* base size: heading-5 (16px) */
+--heading-1: 3rem;
+--heading-2: 2.25rem;
+--heading-4: 1.75rem;
+--heading-5: 1rem;
+--body-1: 1.88rem;
+--body-2: 1.12rem;
+--body-3: 0.75rem;
+--body-4: 0.56rem;
+--heading-3: 2.5rem;
+}
