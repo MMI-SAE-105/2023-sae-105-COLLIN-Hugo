@@ -4,13 +4,16 @@
   }
 .bouton__jaune {
     display: inline-block;
-    padding: 8px 20px;;
+    padding: 10px 25px;;
     color: var(--jaune);
     border: 2px solid var(--jaune);
+    font-family: 'paytone one';
+    font-size: var(--heading-5);
     text-decoration: none;
     font-weight: bold;
     font-family: 'paytone one';
     margin-bottom: 70px;
+    margin-top: 50px;
 }
 .bouton__noir {
     display: inline-block;
@@ -19,7 +22,7 @@
     border: 2px solid var(--noir);
     text-decoration: none;
     font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 50px;
     font-family: 'paytone one';
 }

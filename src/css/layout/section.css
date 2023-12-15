@@ -5,15 +5,12 @@
     background-color: var(--jaune);
     margin-bottom: 230px;
 }
-.info__image {
-    width: 85%;
-    height: 80%;
-    object-fit: cover;
-    object-position: center;
-    margin-top: 30px;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    border-radius: 10px;
+.info {
+    margin: 0;
+    margin-top: 70px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 30px;
 }
 .info__titre {
     font-family: 'paytone one';
@@ -21,9 +18,8 @@
     color: var(--noir);
     line-height: 160%;
     font-size: 1.75rem;
-    padding-top: 30px;
-    margin-bottom: 30px;
     margin-left: 1rem;
+    padding-top: 30px;
 }
 .info__date {
     font-family: 'paytone one';
