@@ -12,6 +12,7 @@
 @import "layout/header.css";
 @import "layout/footer.css";
 @import "layout/section.css";
+@import "layout/contact.css";
 
 /* Components */
 @import "components/menu.css";
@@ -23,4 +24,3 @@
 @import "components/galerie.css";
 @import "components/image-flottant.css";
 @import "components/citation.css";
-@import "components/contact.css";
