@@ -39,8 +39,10 @@
     margin-left: 2rem;
     text-decoration: none;
 }
-.footer__social {
-
+.footer__liste {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
 }
 
 .footer__fin {

@@ -1,0 +1,16 @@
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.galerie__image{
+    background-color: var(--jaune);
+}
+.galerie__image-pilotis {
+    margin: 0;
+}
+.galerie__texte {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

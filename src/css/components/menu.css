@@ -4,8 +4,6 @@
   position: fixed;
   inset: 0;
   background-color: var(--noir);
-  font-size: var(--text-xl);
-  letter-spacing: var(--letter-spacing);
   transition: all 0.4s ease-in-out;
 }
 
@@ -24,7 +22,7 @@
 }
 
 .menu__link {
-  color: var(--gray-white);
+  color: var(--blanc);
   text-decoration: none;
 }
 
@@ -32,13 +30,20 @@
   width: 30px;
   height: 30px;
   position: relative;
+  
 }
-
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
 .menu-btn__bar,
 .menu-btn__bar::before,
 .menu-btn__bar::after {
   content: "";
-  background-color: var(--gray-black);
+  background-color: var(--blanc);
   display: block;
   height: 2px;
   width: 100%;
@@ -59,8 +64,9 @@
 .menu-btn--open .menu-btn__bar,
 .menu-btn--open .menu-btn__bar::before,
 .menu-btn--open .menu-btn__bar::after {
-  background-color: var(--gray-white);
+  background-color: var(--blanc);
   transform: rotate(135deg);
+
 }
 
 .menu-btn--open .menu-btn__bar::before,

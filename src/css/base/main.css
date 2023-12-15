@@ -3,15 +3,56 @@ video {
   max-width: 100%;
   height: auto;
 }
+
 body {
   margin: 0;
   background-color: var(--noir);
-  
+  color: var(--blanc);
+  font-family: 'noto sans', sans-serif;
+  font-size: var(--body-3);
+  line-height: 160%;
 }
+
+h5 {
+  font-family: 'paytone one';
+  font-size: var(--heading-5);
+  color: var(--jaune);
+  margin-top: 30px;
+}
+h1 {
+  font-family: 'paytone one';
+  font-size: var(--heading-1);
+  color: var(--jaune);
+  margin-top: 30px;
+  margin-bottom: 40px;
+  line-height: 120%;
+}
+
+figure {
+  margin: 0 -20px;
+  margin-top: 60px;
+}
+
+main {
+  margin-top: 150px;
+}
+
+
 .noscroll,
 .noscroll body {
   overflow: hidden;
 }
+
+.container {
+  margin: 0 20px;
+}
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
 .titre__h4 {
   padding-top: 60px;
   margin-top: 60px;

@@ -54,7 +54,6 @@
     padding: 12px 24px;
     color: var(--blanc);
     font-family: 'paytone one';
-    
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -97,7 +96,7 @@
   }
 
   .header {
-    background-color: #000000;
+    background-color : var(--noir-pur);
     position: fixed;
     top: 0;
     left: 0;
@@ -105,11 +104,7 @@
     z-index: 3;
     display: flex;
     justify-content: space-between;
-    height: 70px;
-  }
-
-  .header--atTop {
-    background-color: var(--gray-white);
+    height: 80px;
   }
   
   .header__end {
@@ -137,7 +132,7 @@
     display: grid;
     z-index: 4;
     margin-left: 1rem;
-    margin-top: 1px;
+    margin-top: 15px;
   }
     
     
