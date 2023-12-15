@@ -1,0 +1,25 @@
+.figure__flottant-immeuble {
+    float: right;
+    width: 45%;
+    height: 390px;
+    margin: 40px 20px 40px;
+
+}
+.figure__flottant-2 {
+    float: right;
+    width: 42%;
+    height: 140px;
+    margin: 40px 20px 30px;
+}
+.figure__flottant-1 {
+    float: left;
+    width: 42%;
+    height: 140px;
+    margin: 40px 20px 30px; 
+}
+.figure__flottant-chapelle {
+    float: right;
+    width: 50%;
+    height: 200px;
+    margin: 4px 20px 10px;
+}

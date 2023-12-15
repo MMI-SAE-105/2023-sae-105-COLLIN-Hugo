@@ -77,6 +77,7 @@
     padding-top: 10px;
     margin-bottom: 50px;
     margin-left: 1rem;
+    line-height: 140%;
 }
 .info__horaire-liste {
     font-family: 'noto sans', sans-serif;
@@ -89,14 +90,16 @@
     text-decoration: none;
  
 }
+.presentation__container {
+    padding-top: 90px;
+}
 .presentation__texte {
-    line-height: 100%;
+    line-height: 150%;
     font-size: var(--body-1);
     color: var(--blanc);
     text-align: center;
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: 90px;
 }
 .presentation__nombre {
     font-family: 'paytone one';
@@ -111,9 +114,13 @@
     padding-bottom: 30px;
 }
 .presentation__texte-nombre {
+    line-height: 120%;
+    text-align: center;
+    font-family: 'paytone one';
     font-size: var(--heading-4);
     color: var(--jaune);
-    text-align: center;
+    margin-top: -30px;
+
 
 }
 

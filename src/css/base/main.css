@@ -3,6 +3,9 @@ video {
   max-width: 100%;
   height: auto;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
   margin: 0;
   background-color: var(--noir);
@@ -32,12 +35,13 @@ figure {
   margin: 0 -20px;
   margin-top: 60px;
 }
+.figure__legende {
+  margin-left: 1.4rem;
+}
 
 main {
   margin-top: 150px;
 }
-
-
 .noscroll,
 .noscroll body {
   overflow: hidden;

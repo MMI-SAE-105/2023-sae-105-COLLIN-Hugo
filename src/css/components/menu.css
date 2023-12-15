@@ -14,7 +14,10 @@
 
 .menu__list {
   margin-top: 15vh;
-  margin-left: 10vw;
+  text-align: center;
+  align-items: center;
+ 
+
 }
 
 .menu__item {
