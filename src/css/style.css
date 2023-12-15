@@ -16,11 +16,11 @@
 /* Components */
 @import "components/menu.css";
 @import "components/hero.css";
-@import "components/menuTheme.css";
 @import "components/presentation.css";
 @import "components/btn.css";
-@import "components/card.css";
 @import "components/carrousel.css";
 @import "components/autres.css";
 @import "components/galerie.css";
 @import "components/image-flottant.css";
+@import "components/citation.css";
+@import "components/contact.css";

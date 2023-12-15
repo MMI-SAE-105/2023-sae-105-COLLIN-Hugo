@@ -1,0 +1,16 @@
+.citation__container {
+    color: var(--blanc);
+
+}
+.citation__texte {
+    font-family: 'noto sans', thin;
+    text-align: center;
+    font-size: var(--body-"");
+}
+.citation__nom {
+    margin-top: -10px;
+    font-family: 'paytone one';
+    text-align: right;
+}
+
+
