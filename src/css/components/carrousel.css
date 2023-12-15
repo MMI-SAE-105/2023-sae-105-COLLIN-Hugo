@@ -10,14 +10,16 @@
 .carousel__image {
     padding-top: 50px;
     margin-left: 1rem;
-    margin-right: 1rem;
+    margin-right: 1rem;  
 }
+
 .carousel__element {
     flex: 1 0 80%;
     scroll-snap-align: start;
 }
 .carousel__element figure {
     margin: 0;
+    
 }
 .carousel__texte {
     color: var(--jaune);
