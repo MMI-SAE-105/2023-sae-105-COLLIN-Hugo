@@ -1,16 +1,54 @@
-.galerie {
+.container__galerie {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 0rem;
+    row-gap: 1.9rem;
 }
 
 .galerie__image{
     background-color: var(--jaune);
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 .galerie__image-pilotis {
     margin: 0;
+    margin-bottom: 5px;
 }
 .galerie__texte {
     margin-left: 1rem;
     margin-right: 1rem;
+    color: var(--noir);
+    font-size: var(--body-3);
+    text-align: center;
+    line-height: 110%;
+}
+.container__galerie-deux {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    row-gap: 1.9rem;
+}
+.galerie__renovation {
+    background-color: var(--jaune);
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    gap: 4rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.galerie__renovation-avant {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.galerie__renovation-apres {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.galerie__legende {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: var(--noir);
+    font-size: var(--body-3);
+    text-align: center;
+    line-height: 110%;
 }

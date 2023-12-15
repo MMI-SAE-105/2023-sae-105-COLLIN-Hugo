@@ -2,4 +2,15 @@
     margin: 0;
     padding-top: 10px;
 }
-
+.figure__archive {
+    width: 50%;
+    height: auto;
+}
+.container__archive {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    margin-top: -40px;
+}

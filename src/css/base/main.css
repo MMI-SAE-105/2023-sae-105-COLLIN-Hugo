@@ -22,6 +22,15 @@ h5 {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+h4 {
+  font-family: 'paytone one';
+  font-size: var(--heading-4);
+  color: var(--jaune);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  margin-bottom: 30px;
+}
 h1 {
   font-family: 'paytone one';
   font-size: var(--heading-1);
@@ -37,6 +46,7 @@ figure {
 }
 .figure__legende {
   margin-left: 1.4rem;
+  font-size: var(--body-4);
 }
 
 main {
